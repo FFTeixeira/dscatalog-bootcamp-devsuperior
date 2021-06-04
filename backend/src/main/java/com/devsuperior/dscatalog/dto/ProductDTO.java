@@ -1,7 +1,12 @@
 package com.devsuperior.dscatalog.dto;
 
 import java.io.Serializable;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
+import com.devsuperior.dscatalog.entities.Category;
 import com.devsuperior.dscatalog.entities.Product;
 
 public class ProductDTO implements Serializable {
@@ -13,12 +18,16 @@ public class ProductDTO implements Serializable {
 	private String description;
 	private Double price;
 	private String imgUrl;
+	private Instant date;
+
+	private List<CategoryDTO> categories = new ArrayList<>();
 
 	public ProductDTO() {
+
 		super();
 	}
 
-	public ProductDTO(Long id, String name, String description, Double price, String imgUrl) {
+	public ProductDTO(Long id, String name, String description, Double price, String imgUrl, Instant date) {
 
 		super();
 		this.id = id;
@@ -26,6 +35,7 @@ public class ProductDTO implements Serializable {
 		this.description = description;
 		this.price = price;
 		this.imgUrl = imgUrl;
+		this.date = date;
 	}
 
 	public ProductDTO(Product entity) {
@@ -36,6 +46,14 @@ public class ProductDTO implements Serializable {
 		description = entity.getDescription();
 		price = entity.getPrice();
 		imgUrl = entity.getImgUrl();
+		date = entity.getDate();
+	}
+
+	public ProductDTO(Product entity, Set<Category> categories) {
+
+		this(entity);
+
+		categories.forEach(cat -> this.categories.add(new CategoryDTO(cat)));		
 	}
 
 	public Long getId() {
@@ -86,6 +104,19 @@ public class ProductDTO implements Serializable {
 		this.imgUrl = imgUrl;
 	}
 
+	public Instant getDate() {
+		return date;
+	}
+
+	public void setDate(Instant date) {
+		this.date = date;
+	}
+
+	public List<CategoryDTO> getCategories() {
+
+		return categories;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

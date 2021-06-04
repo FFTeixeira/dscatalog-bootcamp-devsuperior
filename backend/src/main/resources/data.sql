@@ -54,3 +54,14 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES (22, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (23, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (24, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (25, 3);
+
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('John Lenon', '12345678910', 10500.0, TIMESTAMP WITH TIME ZONE '1961-07-14T10:00:00Z', 2);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Alanis Morissett', '01020304050', 11600.0, TIMESTAMP WITH TIME ZONE '1962-08-14T11:20:00Z', 2);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Bryan Adams', '10203040506', 12700.0, TIMESTAMP WITH TIME ZONE '1963-08-14T12:30:55Z', 3);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Jim Carrey', '11121314151', 13800.0, TIMESTAMP WITH TIME ZONE '1964-09-15T11:22:33Z', 2);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Margareth Thatcher', '21222324252', 9100.0, TIMESTAMP WITH TIME ZONE '2000-02-16T17:18:00Z', 1);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Robert Downey Jr', '31323334353', 8200.0, TIMESTAMP WITH TIME ZONE '1999-09-19T11:12:00Z', 1);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Paul Simon', '41424344454', 7300.0, TIMESTAMP WITH TIME ZONE '1997-07-18T21:22:00Z', 4);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Britney Spears', '51525354555', 6400.0, TIMESTAMP WITH TIME ZONE '1977-12-13T23:24:00Z', 2);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Julia Roberts', '61626364656', 5300.0, TIMESTAMP WITH TIME ZONE '1989-07-14T13:55:00Z', 3);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Bruce Williams', '71727374757', 4200.0, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 4);
